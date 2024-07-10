@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-weight: 600;
+  color: white;
+  font-size: 60px;
+  margin: 10px 0px 30px 0px;
+}
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kanit";
+}
+
+.todo-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: 100vw;
+  position: relative;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  background-image: url("andrew-coelho-aL7SA1ASVdQ-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1; /* Помещает изображение за контент */
+}
+
+input {
+  width: 350px;
+  height: 44px;
+  background-color: #dadada;
+  border: none;
+  border-radius: 30px;
+  color: #015c13;
+  padding-left: 20px;
+  font-weight: 600;
+}
+
+#add-btn {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #dadada;
+  border: none;
+  border-radius: 100%;
+  color: rgb(93, 90, 90);
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 40px;
+  font-family: "Kanit";
+  padding-bottom: 5.5px;
+  transition: background-color 0.3s;
+}
+
+#add-btn:hover {
+  background-color: #015c13;
+  color: white;
+}
+
+#list-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  #list-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.item-content {
+  background-color: white;
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  animation: fadeOut 0.3s ease forwards;
+}
+#background-upload {
+  display: none;
+}
+
+.upload-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #dadddb;
+  color: white;
+  padding: 10px;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-icon:hover {
+  background-color: #eeeeee;
+}
+.text {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-wrap: wrap;
+}
+
+.buttons-task {
+  height: 30%;
+  display: flex;
+  flex-direction: rown;
+  justify-content: space-between;
+  align-items: end;
+}
+.yes-btn,
+.x-btn {
+  width: 75px;
+  height: 50px;
+
+  font-size: 20px;
+  background-color: white;
+  border: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.x-btn {
+  border-bottom-right-radius: 10px;
+}
+
+.yes-btn {
+  border-bottom-left-radius: 10px;
+}
+
+.x-btn:hover {
+  background-color: red;
+}
+
+.yes-btn:hover {
+  background-color: #015c13;
+}
+
+#completed {
+  display: none;
+}
+
+.change-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  display: flex;
+  transition: all 0.1s ease;
+}
+
+.change-btn:hover {
+  transform: scale(1.05);
+}
+
+.item-changed {
+  background-color: white;
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  animation: fadeOut 0.3s ease forwards;
+}
+
+#completed .x-btn {
+  width: 150px;
+  border-bottom-left-radius: 10px;
+}
+
+.links {
+  color: white;
+  font-size: 30px;
+}
