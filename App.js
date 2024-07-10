@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 
-  ы
+
   changeButton.addEventListener("click", () => {
     if (changeButton.innerHTML === "Currently") {
       changeButton.innerHTML = `Completed`
